@@ -27,13 +27,14 @@ TARGETS := main $(PYVERS) $(PYVERS:%=%-dbg) $(PY3VERS) $(PY3VERS:%=%-dbg)
 
 CONFIGURE_FLAGS := --with-history --cache-file="$(CURDIR)/builddir/config.cache"
 
+# Focal's autoconf 2.69 configure script does not recognize --runstatedir.
 override_dh_auto_configure-arch: $(TARGETS:%=doconfigure-%)
 
 override_dh_auto_configure-indep:
-	dh_auto_configure -- --enable-rebuild-docs --without-python
+	DH_COMPAT=10 dh_auto_configure -- --enable-rebuild-docs --without-python
 
 doconfigure-%:
-	dh_auto_configure --builddirectory=builddir/$(*) -- $(CONFIGURE_FLAGS)
+	DH_COMPAT=10 dh_auto_configure --builddirectory=builddir/$(*) -- $(CONFIGURE_FLAGS)
 	touch $@
 
 doconfigure-main: CONFIGURE_FLAGS += --without-python --with-icu
