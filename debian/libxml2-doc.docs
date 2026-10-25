@@ -1,0 +1,6 @@
+doc/*.gif
+doc/*.html
+doc/*.png
+doc/libxml2-api.xml
+doc/tutorial
+usr/share/doc/libxml2-*/html/html

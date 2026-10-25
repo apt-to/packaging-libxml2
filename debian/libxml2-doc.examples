@@ -1,0 +1,4 @@
+doc/examples/*.c
+doc/examples/*.res
+doc/examples/[tw]*.xml
+doc/examples/index.html
