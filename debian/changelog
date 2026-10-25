@@ -1,3 +1,10 @@
+libxml2 (2.9.10+dfsg-5ubuntu0.20.04.10+aptto1) focal; urgency=medium
+
+  * Backport upstream fix for CVE-2025-49794, CVE-2025-49796.
+  * Include upstream regression fixtures for isolated installed-package tests.
+
+ -- AptTo maintainers <packages@apt.to>  Sun, 25 Oct 2026 10:34:45 +0000
+
 libxml2 (2.9.10+dfsg-5ubuntu0.20.04.10) focal-security; urgency=medium
 
   * SECURITY UPDATE: OOB access in python API
