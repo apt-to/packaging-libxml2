@@ -1,6 +1,6 @@
 libxml2 (2.9.10+dfsg-5ubuntu0.20.04.10+getpatched1) focal; urgency=medium
 
-  * Rebrand the unpublished AptTo pilot candidate for GetPatched.
+  * Use the canonical GetPatched revision; keep focal ESM ordering unresolved.
   * Preserve the reviewed security backport and installed regression tests.
   * No package release has been published.
 
