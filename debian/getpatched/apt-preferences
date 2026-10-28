@@ -1,0 +1,7 @@
+Package: libxml2 libxml2-utils
+Pin: release a=focal-infra-security
+Pin-Priority: 1001
+
+Package: libxml2 libxml2-utils
+Pin: release a=focal-infra-updates
+Pin-Priority: 1001
