@@ -1,2 +1,2 @@
 usr/lib/*/libxml2.so.*
-debian/getpatched/apt-preferences /etc/apt/preferences.d/90-getpatched-libxml2
+debian/getpatched/90-getpatched-libxml2 /etc/apt/preferences.d/
