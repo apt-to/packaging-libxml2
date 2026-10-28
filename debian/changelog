@@ -1,3 +1,11 @@
+libxml2 (2.9.10+dfsg-5ubuntu0.20.04.10+aptto1+getpatched1) focal; urgency=medium
+
+  * Rebrand the unpublished AptTo pilot candidate for GetPatched.
+  * Preserve the reviewed security backport and installed regression tests.
+  * No package release has been published.
+
+ -- GetPatched package maintainers <packages@getpatched.dev>  Wed, 28 Oct 2026 15:47:00 +0000
+
 libxml2 (2.9.10+dfsg-5ubuntu0.20.04.10+aptto1) focal; urgency=medium
 
   * Backport upstream fix for CVE-2025-49794, CVE-2025-49796.
