@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "source": "libxml2",
   "baseVersion": "2.9.10+dfsg-5ubuntu0.20.04.10",
-  "version": "2.9.10+dfsg-5ubuntu0.20.04.10+aptto1+getpatched1",
+  "version": "2.9.10+dfsg-5ubuntu0.20.04.10+getpatched1",
   "release": "focal",
   "architecture": "amd64",
   "targetCves": [
