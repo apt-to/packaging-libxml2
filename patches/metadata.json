@@ -1,8 +1,9 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 3,
   "patches": [
     {
       "id": "cve-2025-49794-49796",
+      "kind": "security",
       "file": "CVE-2025-49794-49796.patch",
       "sha256": "4ad0454ea7c0dcab6de5519b84ef49d84b849924c7717a215481a0f9f7632f73",
       "title": "Keep XPath namespace nodes alive during Schematron reporting",

@@ -1,9 +1,9 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 3,
   "project": {
     "name": "GetPatched",
     "repository": "getpatched/packaging-libxml2",
-    "description": "Declarative maintenance recipe for the Ubuntu libxml2 source package."
+    "description": "Declarative, target-specific maintenance recipe for the libxml2 source package."
   },
   "package": {
     "source": "libxml2",
@@ -15,73 +15,20 @@
   "targets": [
     {
       "id": "ubuntu-focal-amd64",
-      "base": {
-        "distribution": "Ubuntu",
-        "release": "20.04",
-        "codename": "focal",
-        "sourcePocket": "updates",
-        "architecture": "amd64"
-      },
-      "source": {
-        "format": "3.0 (quilt)",
-        "version": "2.9.10+dfsg-5ubuntu0.20.04.10",
-        "publication": "https://api.launchpad.net/1.0/ubuntu/+archive/primary/+sourcepub/17211645",
-        "publishedAt": "2025-04-28T14:11:49.338191+00:00",
-        "descriptor": {
-          "name": "libxml2_2.9.10+dfsg-5ubuntu0.20.04.10.dsc",
-          "url": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/libxml2/2.9.10+dfsg-5ubuntu0.20.04.10/libxml2_2.9.10+dfsg-5ubuntu0.20.04.10.dsc",
-          "sha256": "f6bdb548b3e50216dc0721738ba8125277395d5de9e9c9900741fda82d3a7c88",
-          "bytes": 3125
-        },
-        "files": [
-          {
-            "name": "libxml2_2.9.10+dfsg.orig.tar.xz",
-            "role": "upstream-source",
-            "url": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/libxml2/2.9.10+dfsg-5ubuntu0.20.04.10/libxml2_2.9.10+dfsg.orig.tar.xz",
-            "sha256": "65ee7a2f5e100c64ddf7beb92297c9b2a30b994a76cd1fab67470cf22db6b7d0",
-            "bytes": 2503560
-          },
-          {
-            "name": "libxml2_2.9.10+dfsg-5ubuntu0.20.04.10.debian.tar.xz",
-            "role": "ubuntu-packaging",
-            "url": "https://launchpad.net/ubuntu/+archive/primary/+sourcefiles/libxml2/2.9.10+dfsg-5ubuntu0.20.04.10/libxml2_2.9.10+dfsg-5ubuntu0.20.04.10.debian.tar.xz",
-            "sha256": "93996cc05c902fca661c0f4b5ccd2691e62cfda5e38b2556b68bafa51bf0b843",
-            "bytes": 46084
-          }
-        ],
-        "signatureVerification": {
-          "verified": false,
-          "note": "The descriptor's OpenPGP signature was not verified. The descriptor and listed archives are pinned by SHA-256."
-        }
-      },
-      "supportedSourceVersions": [
-        "2.9.10+dfsg-5ubuntu0.20.04.10"
-      ],
-      "packageVersion": "2.9.10+dfsg-5ubuntu0.20.04.10+getpatched1",
-      "releaseSerial": 1,
-      "changelog": {
-        "distribution": "focal",
-        "urgency": "medium",
-        "maintainer": "GetPatched Maintainers <packages@getpatched.dev>",
-        "date": "Thu, 29 Oct 2026 00:00:00 +0000"
-      },
-      "binaryPackages": [
-        "libxml2",
-        "libxml2-utils"
-      ],
-      "patches": [
-        "cve-2025-49794-49796"
-      ],
-      "releaseAccess": {
-        "policy": "sponsor-first",
-        "sponsorDelayHours": 168
-      },
-      "status": "unreleased-development-candidate"
+      "file": "targets/ubuntu/focal-amd64.json"
     }
   ],
   "patchMetadata": "patches/metadata.json",
   "regressionTests": {
     "fixturesDirectory": "tests/fixtures",
     "runner": "getpatched/platform:verification/regression.py"
+  },
+  "licensing": {
+    "publicContributionsSpdx": "MIT",
+    "publicContributionsLicenseFile": "LICENSE",
+    "earlyBinaryLicenseId": "LicenseRef-GetPatched-Early-Binary-1.0",
+    "earlyBinaryTermsFile": "LICENSES/GETPATCHED-EARLY-ACCESS.md",
+    "upstreamCopyrightFile": "LICENSES/ubuntu-source-copyright",
+    "upstreamLicenses": "preserve"
   }
 }
