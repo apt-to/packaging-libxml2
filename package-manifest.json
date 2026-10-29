@@ -26,7 +26,7 @@
   "licensing": {
     "publicContributionsSpdx": "MIT",
     "publicContributionsLicenseFile": "LICENSE",
-    "earlyBinaryLicenseId": "LicenseRef-GetPatched-Early-Binary-1.0",
+    "earlyBinaryLicenseId": "LicenseRef-GetPatched-Early-Binary-1.1",
     "earlyBinaryTermsFile": "LICENSES/GETPATCHED-EARLY-ACCESS.md",
     "upstreamCopyrightFile": "LICENSES/ubuntu-source-copyright",
     "upstreamLicenses": "preserve"

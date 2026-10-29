@@ -62,8 +62,11 @@
     "policy": "sponsor-first",
     "sponsorDelayHours": 168,
     "sponsorEligibility": "any-active-individual-github-sponsorship",
-    "earlyBinaryLicenseId": "LicenseRef-GetPatched-Early-Binary-1.0",
-    "publicContributionSpdx": "MIT"
+    "earlyBinaryLicenseId": "LicenseRef-GetPatched-Early-Binary-1.1",
+    "publicContributionSpdx": "MIT",
+    "earlyUse": ["private", "commercial"],
+    "earlyRedistributionAllowed": false,
+    "publicBinaryLicenseSpdx": "MIT"
   },
   "status": "unreleased-development-candidate"
 }

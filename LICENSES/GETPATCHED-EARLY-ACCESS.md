@@ -1,20 +1,22 @@
-# GetPatched Early Binary Access Terms — version 1.0
+# GetPatched Early Binary Access Terms — version 1.1
 
-These terms apply to official GetPatched binary package files downloaded from
+These version 1.1 terms apply to official GetPatched binary package files downloaded from
 the authenticated early-access APT channel before that package target is
 publicly released. Public recipe repositories remain visible. Their
 GetPatched-authored files are MIT-licensed, so anyone may build from source
 and use or redistribute an independent build under that licence and any
 applicable third-party licences.
 
-An active individual GitHub Sponsors sponsorship at any tier is required to
-obtain official early-channel binaries. A one-time sponsorship qualifies only
-while GitHub reports it active. Access ends when GitHub no longer reports the
-user's sponsorship as active. Device credentials are checked against current
-sponsor status; signed end-of-cycle cancellation events immediately invalidate
-cached access, active-only reconciliation runs every 15 minutes, and stale
-sponsor snapshots fail closed. An organization
-sponsorship does not grant access to every organization member.
+Any active individual GitHub Sponsors sponsorship qualifies, regardless of
+tier. A one-time sponsorship qualifies only while GitHub reports it active.
+Organization sponsorships are not currently supported because the service
+cannot securely map an organization sponsorship to a specific GitHub user;
+organization membership alone never grants access. Access ends when GitHub
+reports that the individual sponsorship is inactive.
+Device credentials are checked against current sponsor status; signed
+end-of-cycle cancellation events immediately invalidate cached access,
+active-only reconciliation runs every 15 minutes, and stale sponsor snapshots
+fail closed.
 
 You may install and use official early binaries for private and commercial
 purposes. You may not redistribute, sublicense, mirror, or share the official
