@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "patches": [
+    {
+      "id": "cve-2025-49794-49796",
+      "file": "CVE-2025-49794-49796.patch",
+      "sha256": "4ad0454ea7c0dcab6de5519b84ef49d84b849924c7717a215481a0f9f7632f73",
+      "title": "Keep XPath namespace nodes alive during Schematron reporting",
+      "description": "Preserves the XPath result for the duration of Schematron report generation and checks node types before reading element fields.",
+      "cves": [
+        "CVE-2025-49794",
+        "CVE-2025-49796"
+      ],
+      "upstream": {
+        "repository": "https://gitlab.gnome.org/GNOME/libxml2",
+        "commit": "81cef8c5b5aec2acdf5707e57a6db0c8d1d0abca",
+        "url": "https://gitlab.gnome.org/GNOME/libxml2/-/commit/81cef8c5b5aec2acdf5707e57a6db0c8d1d0abca"
+      },
+      "appliesTo": [
+        {
+          "target": "ubuntu-focal-amd64",
+          "sourceVersion": "2.9.10+dfsg-5ubuntu0.20.04.10"
+        }
+      ],
+      "dep3": {
+        "origin": "Backport of the upstream fix; adapted for focal's 2.9.10 implementation.",
+        "forwarded": "not-needed",
+        "lastUpdate": "2026-10-25"
+      },
+      "tests": [
+        {
+          "id": "schematron-invalid-read-regression",
+          "runner": "getpatched/platform:verification/regression.py",
+          "fixtures": [
+            {
+              "path": "tests/fixtures/cve-2025-49794.sct",
+              "sha256": "dbd759e33cdbd8fa0ccfba1d76651b3ed9c7f0f2ee316d21fd853cbe4da7cfcf"
+            },
+            {
+              "path": "tests/fixtures/cve-2025-49794_0.xml",
+              "sha256": "a1e4e7cacf7205665bdf34e140d1a12a411570a4701d9477abeab7bd2b54f46a"
+            },
+            {
+              "path": "tests/fixtures/cve-2025-49796.sct",
+              "sha256": "deb57fe97066926efc9e27cedb7ba1ee3e7a3d067d86e26a9a8d7a24df1e0e59"
+            },
+            {
+              "path": "tests/fixtures/cve-2025-49796_0.xml",
+              "sha256": "4d1f9f7590e49cf85c1e5ad25773896c2c2ffec0ff1b13b67f99d3e9b159b2b4"
+            }
+          ],
+          "baselineExpectation": "Valgrind identifies the Schematron invalid read on the vulnerable focal binaries.",
+          "patchedExpectation": "The installed focal backport completes both cases without invalid reads; a normal xmllint consumer check passes."
+        }
+      ]
+    }
+  ]
+}
