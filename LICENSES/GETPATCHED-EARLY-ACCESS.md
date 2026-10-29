@@ -11,7 +11,9 @@ An active individual GitHub Sponsors sponsorship at any tier is required to
 obtain official early-channel binaries. A one-time sponsorship qualifies only
 while GitHub reports it active. Access ends when GitHub no longer reports the
 user's sponsorship as active. Device credentials are checked against current
-sponsor status and stale sponsor snapshots fail closed. An organization
+sponsor status; signed end-of-cycle cancellation events immediately invalidate
+cached access, active-only reconciliation runs every 15 minutes, and stale
+sponsor snapshots fail closed. An organization
 sponsorship does not grant access to every organization member.
 
 You may install and use official early binaries for private and commercial
